@@ -1,0 +1,24 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using  UnityEngine.SceneManagement;
+public class moreu : MonoBehaviour
+{
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "player")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
+    void Start()
+    {
+        
+    }
+    void Update()
+    {
+        
+    }
+}
