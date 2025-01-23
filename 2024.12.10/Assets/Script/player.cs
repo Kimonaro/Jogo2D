@@ -6,10 +6,10 @@ using UnityEngine;
 
 public class player: MonoBehaviour
 {
-    public float velocidade = 10.09f;
+    public float velocidade = 7f;
     private Rigidbody2D _rigidbody2D;
     private SpriteRenderer spriteRenderer;
-    public float forcaPulo = 10f;
+    public float forcaPulo = 9f;
     public bool noChao;
     void Start()
     {

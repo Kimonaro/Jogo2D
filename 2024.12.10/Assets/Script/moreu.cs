@@ -7,12 +7,11 @@ public class moreu : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "player")
+        if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
         }
     }
-
     void Start()
     {
         
