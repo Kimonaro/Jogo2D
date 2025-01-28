@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class player: MonoBehaviour
+public class Player: MonoBehaviour
 {
     public float velocidade = 7f;
     private Rigidbody2D _rigidbody2D;
