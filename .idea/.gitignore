@@ -3,9 +3,9 @@
 /workspace.xml
 # Rider ignored files
 /modules.xml
-/contentModel.xml
 /projectSettingsUpdater.xml
-/.idea.2024.12.10.iml
+/.idea.Jogo2D.iml
+/contentModel.xml
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files

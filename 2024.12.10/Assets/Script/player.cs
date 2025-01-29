@@ -52,12 +52,11 @@ public class Player: MonoBehaviour
             Debug.Log("RightArrow"+Time.deltaTime);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && noChao == true)
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) && noChao == true)
         {
             _rigidbody2D.AddForce(new Vector2(0,1) * forcaPulo,ForceMode2D.Impulse);
             Debug.Log("Space");
             
         }
-        
     }
 }
