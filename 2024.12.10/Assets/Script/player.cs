@@ -10,10 +10,11 @@ public class Player: MonoBehaviour
     private Rigidbody2D _rigidbody2D;
     private SpriteRenderer spriteRenderer;
     public float forcaPulo = 9f;
-    public bool noChao;
+    public bool noChao = false;
     void Start()
     {
         _rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
+        
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
@@ -35,28 +36,29 @@ public class Player: MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) ) 
+        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) 
         {
             gameObject.transform.position += new Vector3(-velocidade*Time.deltaTime,0,0);
 
-            Debug.Log("LeftArrow"+Time.deltaTime);
+            Debug.Log("esquerda"+Time.deltaTime);
 
             spriteRenderer.flipX = true;
         }
 
         if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
-        {
-             gameObject.transform.position += new Vector3(velocidade*Time.deltaTime,0,0);
+        { 
+            gameObject.transform.position += new Vector3(velocidade*Time.deltaTime,0,0);
            
            spriteRenderer.flipX = false;
-            Debug.Log("RightArrow"+Time.deltaTime);
+           
+            Debug.Log("direita"+Time.deltaTime);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) && noChao == true)
+        if (( Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) ) && noChao == true)
         {
             _rigidbody2D.AddForce(new Vector2(0,1) * forcaPulo,ForceMode2D.Impulse);
-            Debug.Log("Space");
             
+            Debug.Log("para cima");
         }
     }
 }
