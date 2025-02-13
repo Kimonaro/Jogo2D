@@ -7,6 +7,7 @@ TagManager:
   - chao
   - moreu
   - Bandeira
+  - Muro
   layers:
   - Default
   - TransparentFX
