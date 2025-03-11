@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Bad : MonoBehaviour
 {
+    
+    private SpriteRenderer spriteRenderer;
     public int fast = 5;
 
     public int acula = 1;
@@ -12,7 +14,7 @@ public class Bad : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     void RebolarMato()
@@ -20,10 +22,12 @@ public class Bad : MonoBehaviour
         if (acula == 1)
         {
             acula = 2;
+            spriteRenderer.flipX = true;
         }
         else if (acula == 2)
         {
             acula = 1;
+            spriteRenderer.flipX = false;
         } 
             
     }
